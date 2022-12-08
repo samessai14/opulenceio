@@ -1,0 +1,29 @@
+.add-portfolio--container {
+  height: 76vh;
+  width: 84vw;
+  /* border: 2px solid blue; */
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: #1b263b;
+}
+
+.hidden {
+  display: none;
+}
+
+.savePortfolioBtn {
+  width: 200px;
+  height: 65px;
+  font-size: 22px;
+  border-radius: 6px;
+  position: absolute;
+  right: 0;
+  bottom: 10;
+}
+
+.addPortfolioH1 {
+  color: #1b263b;
+}

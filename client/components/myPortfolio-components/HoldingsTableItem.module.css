@@ -1,0 +1,13 @@
+.tableItem {
+  display: flex;
+  /* justify-content: flex-end; */
+  gap: 30px;
+  /* text-align: center; */
+}
+
+.tableItemTD {
+  display: flex;
+  align-items: center;
+  margin: 5px 36px;
+  /* text-align: left; */
+}

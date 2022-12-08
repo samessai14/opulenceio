@@ -1,0 +1,50 @@
+.userSignUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 250px;
+  padding-top: 30px;
+  /* border: black solid 1px; */
+}
+
+.userSignUpInput {
+  height: 90px;
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 18px;
+  border: 2px solid #57739981;
+}
+
+.userSignUpButton {
+  width: 100px;
+  height: 70px;
+  font-size: 20px;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 14px;
+  background-color: #577399;
+  color: #f7f7ff;
+  padding: 6px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.userSignUpButton:hover,
+.userSignUpButton:active {
+  background: #bdd5ea;
+  border-color: #bdd5ea;
+  color: #577399;
+}
+
+.signUpCard {
+  margin-top: 200px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,39 @@
+table {
+  font-size: 18px;
+  /* border: 2px solid #bdd5ea; */
+  /* width: 30%; */
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  border-radius: 6px;
+  position: relative;
+  color: #1b263b;
+  font-weight: 550;
+  background-color: #57739933;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.tableHead {
+  border-bottom: 1px solid #1b263b;
+  margin-bottom: 12px;
+  display: flex;
+}
+.tableHeadTH {
+  margin: 5px 12px;
+}
+.totalSumRow {
+  font-weight: bold;
+  border-top: 1px solid #1b263b;
+  margin-top: 16px;
+  display: flex;
+  position: absolute;
+  bottom: 10;
+}
+
+.totalSumRowTD {
+  margin: 5px 36px;
+}

@@ -1,0 +1,26 @@
+.my-portfolio--container {
+  height: 76vh;
+  width: 84vw;
+  /* border: 2px solid blue; */
+  margin: 50px;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hidden {
+  display: none;
+}
+
+.holdingsTableInGrid {
+  grid-column: 1;
+  grid-row: 2 / 3;
+}
+
+.myPortfolioTitleH1 {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  color: #1b263b;
+}

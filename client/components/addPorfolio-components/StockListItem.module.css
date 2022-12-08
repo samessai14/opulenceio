@@ -1,0 +1,24 @@
+.stockListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 30px;
+  font-size: 24px;
+  border: black solid 1px;
+  padding: 10px;
+}
+
+.stockListItemSubItem {
+  display: flex;
+  height: 32px;
+}
+
+.stockListButton {
+  width: 70px;
+  height: 30px;
+}
+
+.hidden {
+  display: none;
+}
