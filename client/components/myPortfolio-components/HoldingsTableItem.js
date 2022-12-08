@@ -4,9 +4,13 @@ import classes from './HoldingsTableItem.module.css';
 const HoldingsTableItem = (props) => {
   return (
     <tr className={classes.tableItem}>
-      <td className={classes.tableItemTD} id={props.ticker}>
+      <button
+        className={classes.tableItemTickerBtn}
+        onClick={props.onClick}
+        id={props.ticker}
+      >
         {props.ticker}
-      </td>
+      </button>
       <td className={classes.tableItemTD}>${props.marketValue.toFixed(2)}</td>
     </tr>
   );

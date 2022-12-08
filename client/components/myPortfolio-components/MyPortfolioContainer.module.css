@@ -30,3 +30,13 @@
   grid-row: 2 / 4;
   grid-column: 2 / 3;
 }
+
+.myChart {
+  width: 500px;
+  background-color: #57739933;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  margin-left: 20px;
+}

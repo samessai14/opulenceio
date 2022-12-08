@@ -12,8 +12,8 @@ yahooFinanceController.getTickerHistory = async (req, res, next) => {
   try {
     const historicalData = await yf.historical({
       symbols: tickersArr,
-      from: '10/01/22',
-      to: '11/01/22',
+      from: '11/08/22',
+      to: '12/07/22',
     });
 
     const allDetails = [...res.locals.analytics];

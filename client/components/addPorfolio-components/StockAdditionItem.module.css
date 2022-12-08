@@ -11,11 +11,29 @@
   height: 30px;
   margin: 5px;
   font-size: 18px;
+  border: 2px solid #1b263bbf;
+  border-radius: 6px;
 }
 
 .stockAdditionItemButton {
   width: 70px;
-  height: 30px;
+  height: 36px;
+  background-color: #1b263bbf;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.stockAdditionItemButton:hover,
+.stockAdditionItemButton:active {
+  background: #bdd5ea;
+  border-color: #bdd5ea;
+}
+
+.stockAdditionItemButton:focus {
+  outline: none;
 }
 
 .hidden {

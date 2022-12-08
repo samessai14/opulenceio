@@ -12,3 +12,29 @@
 
   /* text-align: left; */
 }
+
+.tableItemTickerBtn {
+  border: none;
+  background-color: #577399;
+  color: white;
+  width: 120px;
+  height: 30px;
+  font: 22px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px 82px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.tableItemTickerBtn:hover,
+.tableItemTickerBtn:active {
+  background: #bdd5ea;
+  border-color: #bdd5ea;
+  color: #577399;
+}
+
+.tableItemTickerBtn:focus {
+  outline: none;
+}

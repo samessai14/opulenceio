@@ -10,6 +10,7 @@ const CurrentHoldingsTable = (props) => {
       <HoldingsTableItem
         ticker={holding.ticker}
         marketValue={holding.marketValue}
+        onClick={props.onTickerClick}
         key={i + 1000}
       />
     );

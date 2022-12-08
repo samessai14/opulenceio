@@ -21,7 +21,7 @@ const App = () => {
   const [newPortfolio, setNewPortfolio] = useState([]);
 
   //state for price history chart
-  const [activeTicker, setActiveTicker] = useState({});
+  const [activeTicker, setActiveTicker] = useState('');
 
   //navbar state
   const [navState, setNavState] = useState({
@@ -209,8 +209,8 @@ const App = () => {
 
   const onTickerClickHandler = (e) => {
     const ticker = e.target.id;
+    setActiveTicker(ticker);
   };
-
   return (
     <div className={classes.app}>
       <Navbar
@@ -230,7 +230,13 @@ const App = () => {
           onSubmitPortfolio={onSubmitCreatedPortfolioHandler}
         />
       )}
-      {isInMyPortfolio && <MyPortfolioContainer analytics={analytics} />}
+      {isInMyPortfolio && (
+        <MyPortfolioContainer
+          onTickerClick={onTickerClickHandler}
+          analytics={analytics}
+          ticker={activeTicker}
+        />
+      )}
       {isOnLandingPage && <LandingPageContainer />}
     </div>
   );
