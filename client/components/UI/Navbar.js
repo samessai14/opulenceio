@@ -32,6 +32,11 @@ const Navbar = (props) => {
           Sign Up
         </Button>
       )}
+      {props.navState.myBudgetBtn && (
+        <Button className={classes.navbarBtn} onClick={props.onBudgetClick}>
+          Budget
+        </Button>
+      )}
       {props.navState.logoutBtn && (
         <Button className={classes.navbarBtn} onClick={props.onLogOutClick}>
           Log Out

@@ -24,11 +24,11 @@ table {
   display: flex;
 }
 .tableHeadTH {
-  margin: 5px 52px;
+  margin: 5px 92px;
 }
 .totalSumRow {
   font-weight: bold;
-  border-top: 1px solid #1b263b;
+  /* border-top: 1px solid #1b263b; */
   margin-top: 16px;
   display: flex;
   position: absolute;
@@ -36,5 +36,7 @@ table {
 }
 
 .totalSumRowTD {
-  margin: 5px 82px;
+  margin: 5px 102px;
+  font-weight: 700;
+  font-size: 24px;
 }

@@ -8,8 +8,8 @@
   border-radius: 6px;
   background-color: #fe605555;
   border: none;
-  width: 500px;
-  margin-left: 20px;
+  width: 27vw;
+  margin-left: 40px;
 }
 
 .diverseUl {
@@ -17,4 +17,9 @@
   margin: auto;
   color: #1b263b;
   font-weight: 550;
+}
+
+.diverseLi {
+  margin: 4px;
+  font-weight: bold;
 }

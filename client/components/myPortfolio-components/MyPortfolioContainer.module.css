@@ -1,5 +1,5 @@
 .my-portfolio--container {
-  height: 72vh;
+  height: 78vh;
   width: 84vw;
   /* border: 2px solid blue; */
   margin: 50px;
@@ -24,6 +24,7 @@
   align-self: center;
   justify-self: center;
   color: #1b263b;
+  font-weight: bold;
 }
 
 .sectorsInGrid {
@@ -32,11 +33,25 @@
 }
 
 .myChart {
-  width: 500px;
-  background-color: #57739933;
+  width: 27vw;
+  background-color: #f7f7ff52;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   grid-row: 3 / 4;
   grid-column: 2 / 4;
-  margin-left: 20px;
+  margin-left: 40px;
+  border-radius: 6px;
+}
+
+.pieChart {
+  width: 20vw;
+  background-color: #bdd5eaa5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  margin-left: 40px;
+  padding: 10px;
+  border-radius: 6px;
 }

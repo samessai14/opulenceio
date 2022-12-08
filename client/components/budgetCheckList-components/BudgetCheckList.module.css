@@ -1,0 +1,27 @@
+.budgetContainer {
+  height: 72vh;
+  width: 84vw;
+  /* border: 2px solid blue; */
+  margin: 50px;
+  display: grid;
+  grid-template-rows: 70px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.budgetContainerH1 {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  color: #1b263b;
+  font-weight: bold;
+}
+
+.necessities {
+  grid-column: 2 / 4;
+}

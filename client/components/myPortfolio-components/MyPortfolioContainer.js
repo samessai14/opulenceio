@@ -4,6 +4,7 @@ import classes from './MyPortfolioContainer.module.css';
 import Card from '../UI/Card';
 import SectorDiversification from './SectorDiversification';
 import ChartComponent from '../UI/ChartComponent';
+import { PieChart } from '../UI/PieChart';
 const MyPortfolioContainer = (props) => {
   let portfolio;
   if (props.analytics.length > 0) {
@@ -25,6 +26,9 @@ const MyPortfolioContainer = (props) => {
         />
         <div className={classes.myChart}>
           <ChartComponent portfolio={portfolio} active={props.ticker} />
+        </div>
+        <div className={classes.pieChart}>
+          <PieChart />
         </div>
       </div>
     </Card>

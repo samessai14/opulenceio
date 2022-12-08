@@ -45,6 +45,12 @@
   margin-top: 200px;
 }
 
+.signUpH2 {
+  width: 98%;
+  text-align: center;
+  margin-right: 12px;
+}
+
 .hidden {
   display: none;
 }

@@ -55,9 +55,11 @@ const UserController = {
             )
           );
       })
-      .catch(
-        (err) =>
-          'Error in find of userController.verifyUser: ' + JSON.stringify(err)
+      .catch((err) =>
+        next({
+          log: 'There was an issue in verifyUserController',
+          message: { err },
+        })
       );
   },
 

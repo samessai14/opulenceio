@@ -10,7 +10,7 @@ const LandingPageContainer = () => {
         An intuitive, tech driven analytics dashboard for all your personal
         finances.
       </p>
-      <p>Register today. Oppulence awaits.</p>
+      <p>Register today. Opulence awaits.</p>
     </div>
   );
 };

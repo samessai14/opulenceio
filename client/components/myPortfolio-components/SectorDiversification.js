@@ -27,56 +27,66 @@ const SectorDiversification = (props) => {
   return (
     <div className={classes.diverseContainer}>
       <ul className={classes.diverseUl}>
-        <li>Communication Services</li>
-        <li>Consumer Cyclical</li>
-        <li>Consumer Defensive</li>
-        <li>Energy</li>
-        <li>Financial Services</li>
-        <li>Healthcare</li>
-        <li>Industrials</li>
-        <li>Information Technology</li>
-        <li>Basic Materials</li>
-        <li>Real Estate</li>
-        <li>Utilities</li>
+        <li className={classes.diverseLi}>Communication Services</li>
+        <li className={classes.diverseLi}>Consumer Cyclical</li>
+        <li className={classes.diverseLi}>Consumer Defensive</li>
+        <li className={classes.diverseLi}>Energy</li>
+        <li className={classes.diverseLi}>Financial Services</li>
+        <li className={classes.diverseLi}>Healthcare</li>
+        <li className={classes.diverseLi}>Industrials</li>
+        <li className={classes.diverseLi}>Information Technology</li>
+        <li className={classes.diverseLi}>Basic Materials</li>
+        <li className={classes.diverseLi}>Real Estate</li>
+        <li className={classes.diverseLi}>Utilities</li>
       </ul>
       <ul className={classes.diverseUl}>
-        <li>
+        <li className={classes.diverseLi}>
           {sectorCache['Communication Services']
             ? sectorCache['Communication Services']
             : 0}
           %
         </li>
-        <li>
+        <li className={classes.diverseLi}>
           {sectorCache['Consumer Cyclical']
             ? sectorCache['Consumer Cyclical']
             : 0}
           %
         </li>
-        <li>
+        <li className={classes.diverseLi}>
           {sectorCache['Consumer Defensive']
             ? sectorCache['Consumer Defensive']
             : 0}
           %
         </li>
-        <li>{sectorCache['Energy'] ? sectorCache['Energy'] : 0}%</li>
-        <li>
+        <li className={classes.diverseLi}>
+          {sectorCache['Energy'] ? sectorCache['Energy'] : 0}%
+        </li>
+        <li className={classes.diverseLi}>
           {sectorCache['Financial Services']
             ? sectorCache['Financial Services']
             : 0}
           %
         </li>
-        <li>{sectorCache['Healthcare'] ? sectorCache['Healthcare'] : 0}%</li>
-        <li>{sectorCache['Industrials'] ? sectorCache['Industrials'] : 0}%</li>
-        <li>
+        <li className={classes.diverseLi}>
+          {sectorCache['Healthcare'] ? sectorCache['Healthcare'] : 0}%
+        </li>
+        <li className={classes.diverseLi}>
+          {sectorCache['Industrials'] ? sectorCache['Industrials'] : 0}%
+        </li>
+        <li className={classes.diverseLi}>
           {sectorCache['Information Technology']
             ? sectorCache['Information Technology']
             : 0}
         </li>
-        <li>
+        <li className={classes.diverseLi}>
           {sectorCache['Basic Materials'] ? sectorCache['Basic Materials'] : 0}%
         </li>
-        <li>{sectorCache['Real Estate'] ? sectorCache['Real Estate'] : 0}%</li>
-        <li>{sectorCache['Utilities'] ? sectorCache['Utilities'] : 0}%</li>
+        <li className={classes.diverseLi}>
+          {sectorCache['Real Estate'] ? sectorCache['Real Estate'] : 0}%
+        </li>
+        <li className={classes.diverseLi}>
+          {sectorCache['Utilities'] ? sectorCache['Utilities'] : 0}%
+        </li>
       </ul>
     </div>
   );

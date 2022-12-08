@@ -6,6 +6,7 @@ import classes from './App.module.css';
 import MyPortfolioContainer from './myPortfolio-components/MyPortfolioContainer';
 import UserSignUpForm from './signup-component/UserSignUpForm';
 import LandingPageContainer from './landingPage-components/LandingPageContainer';
+import BudgetCheckListContainer from './budgetCheckList-components/BudgetCheckListContainer';
 
 const App = () => {
   //States for what part of the app is the user in/seeing
@@ -13,6 +14,7 @@ const App = () => {
   const [isSigningUp, setIsSigningUp] = useState(false);
   const [isAddingPortfolio, setIsAddingPortfolio] = useState(false);
   const [isInMyPortfolio, setIsInMyPortfolio] = useState(false);
+  const [isInBudget, setIsInBudget] = useState(false);
   const [activeUser, setActiveUser] = useState('');
   const [isOnLandingPage, setIsOnLandingPage] = useState(true);
 
@@ -30,6 +32,7 @@ const App = () => {
     logoutBtn: false,
     myPortfolioBtn: false,
     addPortfolioBtn: false,
+    myBudgetBtn: false,
   });
 
   const loginHandler = () => {
@@ -66,13 +69,33 @@ const App = () => {
     //check if user is logged in/in active session
     //check if user is in MyPortfolio, if yes set it to false
     if (isInMyPortfolio) setIsInMyPortfolio(false);
+    if (isInBudget) setIsInBudget(false);
     setNavState({ ...navState, myPortfolioBtn: true, addPortfolioBtn: false });
     setIsAddingPortfolio(true);
   };
 
+  const switchToMyBudgetHandler = () => {
+    if (isInMyPortfolio) setIsInMyPortfolio(false);
+    if (isAddingPortfolio) setIsAddingPortfolio(false);
+    setNavState({
+      ...navState,
+      myPortfolioBtn: true,
+      addPortfolioBtn: true,
+      myBudgetBtn: false,
+    });
+
+    setIsInBudget(true);
+  };
+
   const switchToMyPortfolioHandler = () => {
     if (isAddingPortfolio) setIsAddingPortfolio(false);
-    setNavState({ ...navState, myPortfolioBtn: false, addPortfolioBtn: true });
+    if (isInBudget) setIsInBudget(false);
+    setNavState({
+      ...navState,
+      myPortfolioBtn: false,
+      addPortfolioBtn: true,
+      myBudgetBtn: true,
+    });
     if (isLoggingIn) setIsLoggingIn(false);
     setIsInMyPortfolio(true);
   };
@@ -102,6 +125,7 @@ const App = () => {
           signUpBtn: false,
           logoutBtn: true,
           addPortfolioBtn: true,
+          myBudgetBtn: true,
         });
         //check if result is valid, if not we need to tell the user that his login was invalid
         if (result) {
@@ -150,6 +174,7 @@ const App = () => {
           signUpBtn: false,
           logoutBtn: true,
           addPortfolioBtn: true,
+          myBudgetBtn: true,
         });
         //check if result is valid, if not we need to tell the user that his login was invalid
         if (result) {
@@ -219,6 +244,7 @@ const App = () => {
         onAddPortfolioClick={switchToAddPortfolioHandler}
         onMyPortfolioClick={switchToMyPortfolioHandler}
         onLogOutClick={logOutHandler}
+        onBudgetClick={switchToMyBudgetHandler}
         navState={navState}
       />
       {isLoggingIn && <UserLoginForm onLoginSubmit={onLoginSubmitHandler} />}
@@ -237,6 +263,7 @@ const App = () => {
           ticker={activeTicker}
         />
       )}
+      {isInBudget && <BudgetCheckListContainer />}
       {isOnLandingPage && <LandingPageContainer />}
     </div>
   );

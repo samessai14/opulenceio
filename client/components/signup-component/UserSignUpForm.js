@@ -5,6 +5,7 @@ import classes from './UserSignUpForm.module.css';
 const UserSignUpForm = (props) => {
   return (
     <Card className={classes.signUpCard}>
+      <h2 className={classes.signUpH2}>Sign Up</h2>
       <form className={classes.userSignUpForm} onSubmit={props.onSignUpSubmit}>
         <input
           className={classes.userSignUpInput}

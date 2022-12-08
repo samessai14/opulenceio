@@ -1,0 +1,49 @@
+.necessaryItemsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  font-size: 50px;
+  font-weight: bold;
+  height: 600px;
+  margin-left: 10px;
+  border-radius: 6px;
+  color: #1b263b;
+  font-weight: 550;
+  background-color: #495867c9;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.necessaryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.checkBox {
+  width: 70px;
+  height: 36px;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 16px 6px;
+}
+
+.necessaryItemInput {
+  height: 30px;
+  margin: 5px;
+  border: 2px solid #f7f7ffe3;
+  border-radius: 6px;
+  margin-left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 16px 6px;
+  color: #f7f7ff;
+}
