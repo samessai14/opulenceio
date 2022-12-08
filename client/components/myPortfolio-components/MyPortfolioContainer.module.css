@@ -1,11 +1,12 @@
 .my-portfolio--container {
-  height: 76vh;
+  height: 72vh;
   width: 84vw;
   /* border: 2px solid blue; */
   margin: 50px;
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 70px 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .hidden {
@@ -14,7 +15,7 @@
 
 .holdingsTableInGrid {
   grid-column: 1;
-  grid-row: 2 / 3;
+  grid-row: 2 / 4;
 }
 
 .myPortfolioTitleH1 {
@@ -23,4 +24,9 @@
   align-self: center;
   justify-self: center;
   color: #1b263b;
+}
+
+.sectorsInGrid {
+  grid-row: 2 / 4;
+  grid-column: 2 / 3;
 }

@@ -94,13 +94,14 @@ app.post(
   '/login',
   userController.verifyUser,
   yahooFinanceController.getQuotes,
+  yahooFinanceController.getTickerHistory,
   // sessionController.startSession,
   // cookieController.setSSIDCookie,
   (req, res) => {
     if (!res.locals.analytics) {
       res.status(200).json([]);
     }
-    res.status(200).json(res.locals.analytics);
+    res.status(200).json(res.locals.allDetails);
   }
 );
 

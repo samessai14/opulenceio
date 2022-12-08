@@ -2,6 +2,32 @@ const yf = require('yahoo-finance');
 
 const yahooFinanceController = {};
 
+yahooFinanceController.getTickerHistory = async (req, res, next) => {
+  if (!res.locals.user.portfolio) {
+    return next();
+  }
+  const portfolio = [...res.locals.user.portfolio];
+  const tickersArr = portfolio.map((el) => el.ticker);
+
+  try {
+    const historicalData = await yf.historical({
+      symbols: tickersArr,
+      from: '10/01/22',
+      to: '11/01/22',
+    });
+
+    const allDetails = [...res.locals.analytics];
+    allDetails.forEach((holding) => {
+      holding.history = historicalData[holding.ticker];
+    });
+    res.locals.allDetails = allDetails;
+    return next();
+  } catch (err) {
+    console.log('error getting historical data');
+    return next();
+  }
+};
+
 yahooFinanceController.getQuotes = async (req, res, next) => {
   if (!res.locals.user.portfolio) {
     return next();
@@ -48,6 +74,10 @@ yahooFinanceController.getQuotes = async (req, res, next) => {
       },
     });
   }
+};
+//helper to extract historical data for each ticker
+const extractHistory = (ticker, historyObj) => {
+  return historyObj[ticker];
 };
 
 module.exports = yahooFinanceController;

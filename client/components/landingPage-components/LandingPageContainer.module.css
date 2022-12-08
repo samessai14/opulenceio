@@ -1,0 +1,10 @@
+.landingPageContainer {
+  width: 38%;
+  height: 300px;
+  /* border: solid black 2px; */
+  margin: 180px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #1b263b;
+  font-style: italic;
+}

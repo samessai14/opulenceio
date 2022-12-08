@@ -5,6 +5,7 @@ import AddPortfolioContainer from './addPorfolio-components/AddPortfolioContaine
 import classes from './App.module.css';
 import MyPortfolioContainer from './myPortfolio-components/MyPortfolioContainer';
 import UserSignUpForm from './signup-component/UserSignUpForm';
+import LandingPageContainer from './landingPage-components/LandingPageContainer';
 
 const App = () => {
   //States for what part of the app is the user in/seeing
@@ -13,10 +14,14 @@ const App = () => {
   const [isAddingPortfolio, setIsAddingPortfolio] = useState(false);
   const [isInMyPortfolio, setIsInMyPortfolio] = useState(false);
   const [activeUser, setActiveUser] = useState('');
+  const [isOnLandingPage, setIsOnLandingPage] = useState(true);
 
   // active user state
   const [analytics, setAnalytics] = useState([]);
   const [newPortfolio, setNewPortfolio] = useState([]);
+
+  //state for price history chart
+  const [activeTicker, setActiveTicker] = useState({});
 
   //navbar state
   const [navState, setNavState] = useState({
@@ -31,12 +36,16 @@ const App = () => {
     if (isSigningUp) setIsSigningUp(false);
     if (isLoggingIn) setIsLoggingIn(false);
     else setIsLoggingIn(true);
+    if (isOnLandingPage) setIsOnLandingPage(false);
+    else setIsOnLandingPage(true);
   };
 
   const signUpHandler = () => {
     if (isLoggingIn) setIsLoggingIn(false);
     if (isSigningUp) setIsSigningUp(false);
     else setIsSigningUp(true);
+    if (isOnLandingPage) setIsOnLandingPage(false);
+    else setIsOnLandingPage(true);
   };
 
   const logOutHandler = () => {
@@ -198,6 +207,10 @@ const App = () => {
       });
   };
 
+  const onTickerClickHandler = (e) => {
+    const ticker = e.target.id;
+  };
+
   return (
     <div className={classes.app}>
       <Navbar
@@ -218,6 +231,7 @@ const App = () => {
         />
       )}
       {isInMyPortfolio && <MyPortfolioContainer analytics={analytics} />}
+      {isOnLandingPage && <LandingPageContainer />}
     </div>
   );
 };

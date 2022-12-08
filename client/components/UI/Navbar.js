@@ -5,6 +5,7 @@ import classes from './Navbar.module.css';
 const Navbar = (props) => {
   return (
     <nav>
+      <h1 className={classes.appTitle}>OPULENCE.IO</h1>
       {props.navState.myPortfolioBtn && (
         <Button
           className={classes.navbarBtn}

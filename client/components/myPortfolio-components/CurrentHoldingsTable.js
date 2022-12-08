@@ -18,7 +18,9 @@ const CurrentHoldingsTable = (props) => {
   return (
     <table className={props.className}>
       <tr className={classes.tableHead}>
-        <th className={classes.tableHeadTH}>Stock Ticker</th>
+        <th align="center" className={classes.tableHeadTH}>
+          Stock Ticker
+        </th>
         <th className={classes.tableHeadTH}>Market Value</th>
       </tr>
       {holdingsArr}

@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentHoldingsTable from './CurrentHoldingsTable';
 import classes from './MyPortfolioContainer.module.css';
 import Card from '../UI/Card';
+import SectorDiversification from './SectorDiversification';
 
 const MyPortfolioContainer = (props) => {
   let portfolio;
@@ -14,6 +15,10 @@ const MyPortfolioContainer = (props) => {
         <h1 className={classes.myPortfolioTitleH1}>MY PORTFOLIO</h1>
         <CurrentHoldingsTable
           className={classes.holdingsTableInGrid}
+          portfolio={portfolio}
+        />
+        <SectorDiversification
+          className={classes.sectorsInGrid}
           portfolio={portfolio}
         />
       </div>

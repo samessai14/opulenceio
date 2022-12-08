@@ -1,13 +1,14 @@
 .tableItem {
   display: flex;
   /* justify-content: flex-end; */
-  gap: 30px;
-  /* text-align: center; */
+  /* gap: 30px; */
 }
 
 .tableItemTD {
+  /* text-align: center; */
   display: flex;
-  align-items: center;
-  margin: 5px 36px;
+  /* align-items: right; */
+  margin: 5px 82px;
+
   /* text-align: left; */
 }
